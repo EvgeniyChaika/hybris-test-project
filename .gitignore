@@ -32,7 +32,6 @@ wro_addons.xml
 /hybris/config/local_tenant_*.properties
 /hybris/config/backup/
 /hybris/config/licence/
-/hybris/config/tcServer/
 
 # IntelliJ IDEA
 .idea/
