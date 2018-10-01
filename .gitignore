@@ -80,7 +80,6 @@ hybris/bin/platform
 sampleconfigurations
 hybris/bin/platform/
 hybris/data/
-hybris/bin/custom/rehau/rehauplatformws/resources/generated-rehauplatformws-web-spring.xml
 
 **/node_modules/
 **/commonwebsrc/
