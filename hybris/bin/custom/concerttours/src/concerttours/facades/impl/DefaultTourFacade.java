@@ -37,6 +37,7 @@ public class DefaultTourFacade implements TourFacade {
                     summary.setDate(concert.getDate());
                     summary.setVenue(concert.getVenue());
                     summary.setType(concert.getConcertType() == ConcertType.OPENAIR ? "Outdoors" : "Indoors");
+                    summary.setCountDown(concert.getDaysUntil());
                     concerts.add(summary);
                 }
             }
@@ -49,7 +50,6 @@ public class DefaultTourFacade implements TourFacade {
         tourData.setConcerts(concerts);
         return tourData;
     }
-
     @Required
     public void setProductService(final ProductService productService) {
         this.productService = productService;

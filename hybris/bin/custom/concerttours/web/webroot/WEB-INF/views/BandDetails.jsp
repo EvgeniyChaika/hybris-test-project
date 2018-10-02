@@ -1,4 +1,4 @@
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!doctype html>
 <html>
 <title>Band Details</title>
@@ -21,4 +21,3 @@ Band Details for ${band.name}
 <a href="../bands">Back to Band List</a>
 </body>
 </html>
->
