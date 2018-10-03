@@ -28,7 +28,7 @@ out/
 wro_addons.xml
 
 # config
-/hybris/config/local.properties
+#/hybris/config/local.properties
 /hybris/config/local_tenant_*.properties
 /hybris/config/backup/
 /hybris/config/licence/
