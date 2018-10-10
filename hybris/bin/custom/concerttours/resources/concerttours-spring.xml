@@ -44,6 +44,7 @@
     <bean id="defaultBandFacade" class="concerttours.facades.impl.DefaultBandFacade">
         <property name="bandService" ref="bandService"/>
         <property name="mediaService" ref="mediaService"/>
+        <property name="configurationService" ref="configurationService"/>
     </bean>
     <alias name="defaultTourFacade" alias="tourFacade"/>
     <bean id="defaultTourFacade" class="concerttours.facades.impl.DefaultTourFacade">
@@ -54,19 +55,20 @@
     <bean id="concerttourEventListener" class="concerttours.events.NewBandEventListener" parent="abstractEventListener">
         <property name="modelService" ref="modelService"/>
     </bean>
-    <bean id="bandAlbumSalesInterceptor" class="concerttours.interceptors.BandAlbumSalesInterceptor" />
+    <bean id="bandAlbumSalesInterceptor" class="concerttours.interceptors.BandAlbumSalesInterceptor"/>
     <bean id="bandInterceptorMapping" class="de.hybris.platform.servicelayer.interceptor.impl.InterceptorMapping">
-        <property name="interceptor" ref="bandAlbumSalesInterceptor" />
-        <property name="typeCode" value="Band" />
+        <property name="interceptor" ref="bandAlbumSalesInterceptor"/>
+        <property name="typeCode" value="Band"/>
     </bean>
-    <bean id="bandAlbumSalesEventListener" class="concerttours.events.BandAlbumSalesEventListener" parent="abstractEventListener" >
-        <property name="modelService" ref="modelService" />
+    <bean id="bandAlbumSalesEventListener" class="concerttours.events.BandAlbumSalesEventListener"
+          parent="abstractEventListener">
+        <property name="modelService" ref="modelService"/>
     </bean>
-    <alias name="defaultNewsService" alias="newsService" />
+    <alias name="defaultNewsService" alias="newsService"/>
     <bean id="defaultNewsService" class="concerttours.service.impl.DefaultNewsService">
-        <property name="newsDAO" ref="newsDAO" />
+        <property name="newsDAO" ref="newsDAO"/>
     </bean>
     <bean id="sendNewsJob" class="concerttours.jobs.SendNewsJob" parent="abstractJobPerformable">
-        <property name="newsService" ref="newsService" />
+        <property name="newsService" ref="newsService"/>
     </bean>
 </beans>
